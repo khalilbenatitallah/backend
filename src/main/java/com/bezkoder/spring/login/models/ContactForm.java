@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 public class ContactForm {
@@ -14,6 +15,7 @@ public class ContactForm {
     private Long id;
 
     @NotBlank
+    @Size(max = 20)
     private String name;
 
     @NotBlank
@@ -21,6 +23,7 @@ public class ContactForm {
     private String email;
 
     @NotBlank
+    @Size(max = 200)
     private String subject;
 
     @NotBlank
